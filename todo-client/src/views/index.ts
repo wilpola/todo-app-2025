@@ -1,5 +1,6 @@
 // Export all the views
 
-import { BasicView } from './Basic';
+import { AdvancedView } from "./Advanced";
+import { BasicView } from "./Basic";
 
-export { BasicView };
+export { AdvancedView, BasicView };

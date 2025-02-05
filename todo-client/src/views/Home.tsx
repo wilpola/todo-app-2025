@@ -6,9 +6,16 @@ export const Home = () => {
 
   return (
     <div className="container mx-auto max-w-screen-lg">
-      <div className="grid items-center content-center grid-cols-[1fr_1fr] justify-center h-screen gap-2 w-auto">
+      <div className="max-w-[95%] flex flex-col pt-[70px] md:grid items-center content-center md:grid-cols-[1fr_1fr] justify-center h-screen gap-2 w-auto mx-auto">
+        <div className="w-full col-span-2 flex flex-col items-center justify-center">
+          <h1 className="text-4xl font-semibold">Choose your poison</h1>
+          <p className="my-2">
+            {" "}
+            Choose which todo app experience you would like to use.
+          </p>
+        </div>
         <Card
-          className="shadow-none justify-self-end max-w-[400px] hover:shadow-lg cursor-pointer"
+          className="shadow-none justify-self-end max-w-[400px] hover:shadow-lg cursor-pointer max-h-[162px]"
           onClick={() => navigate("/basic")}
         >
           <CardHeader>
@@ -23,14 +30,18 @@ export const Home = () => {
           </CardContent>
         </Card>
         <Card
-          className="shadow-none max-w-[400px] h-full hover:shadow-lg cursor-pointer"
+          className="shadow-none max-w-[400px] h-full hover:shadow-lg cursor-pointer max-h-[162px]"
           onClick={() => navigate("/advanced")}
         >
           <CardHeader>
-            <CardTitle>Advnaced todo - app</CardTitle>
+            <CardTitle>Advanced todo - app</CardTitle>
           </CardHeader>
           <CardContent>
-            <p> Perfect for those who need a little more detailed todo app</p>
+            <p>
+              {" "}
+              Perfect for those who need a little more detailed todo app.
+              Including tags, due dates, and task descriptions.{" "}
+            </p>
           </CardContent>
         </Card>
       </div>

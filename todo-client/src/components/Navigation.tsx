@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@/hooks/ThemeProvider";
+import { Moon, Sun } from "lucide-react";
 
 export const Navigation = () => {
   const navigate = useNavigate();
@@ -42,7 +43,8 @@ export const Navigation = () => {
             }}
           >
             {}
-            {theme === "dark" ? "🌞" : "🌙"}
+            {/* {theme === "dark" ? "🌞" : "🌙"} */}
+            {theme === "dark" ? <Sun size={24} /> : <Moon size={24} />}
           </Button>
         </div>
       </div>
